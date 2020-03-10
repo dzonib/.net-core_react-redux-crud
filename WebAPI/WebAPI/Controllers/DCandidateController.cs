@@ -54,8 +54,12 @@ namespace WebAPI.Controllers
             //}
 
             dCandidate.Id = id;
-
-            _context.Entry(dCandidate).State = EntityState.Modified;
+            //var dbCandidate = _context.DCandidates.Where(dc => dc.Id == id).FirstOrDefault();   
+            //dbCandidate.Entity.Address = dCandidate.Address ?? dbCandidate.Entity.Address;
+            //dbCandidate.Entity.FullName = dCandidate.FullName ?? dbCandidate.Entity.FullName;
+            //dbCandidate.Entity.Email = dCandidate.Email ?? dbCandidate.Entity.Email;
+            //dbCandidate.State = EntityState.Modified;
+            
 
             try
             {
