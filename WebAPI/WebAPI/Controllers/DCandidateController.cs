@@ -47,6 +47,7 @@ namespace WebAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDCandidate(int id, DCandidate dCandidate)
         {
+
             //checked for stuff
             //if (id != dCandidate.Id)
             //{
@@ -59,7 +60,9 @@ namespace WebAPI.Controllers
             //dbCandidate.Entity.FullName = dCandidate.FullName ?? dbCandidate.Entity.FullName;
             //dbCandidate.Entity.Email = dCandidate.Email ?? dbCandidate.Entity.Email;
             //dbCandidate.State = EntityState.Modified;
-            
+
+
+            _context.Entry(dCandidate).State = EntityState.Modified;
 
             try
             {
